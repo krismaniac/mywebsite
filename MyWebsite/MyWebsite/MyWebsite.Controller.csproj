@@ -196,6 +196,7 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\GolfController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Global.asax.cs">
@@ -264,10 +265,10 @@
     <Content Include="Views\Manage\VerifyPhoneNumber.cshtml" />
     <Content Include="Views\Shared\Lockout.cshtml" />
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
+    <Content Include="Views\Golf\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Views\Golf\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
@@ -281,6 +282,10 @@
     <ProjectReference Include="..\MyWebsite.Model\MyWebsite.Model.csproj">
       <Project>{4dcf2dfa-f336-4f3e-8304-f42d63d43966}</Project>
       <Name>MyWebsite.Model</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MyWebsite.Services\MyWebsite.Services.csproj">
+      <Project>{4E714DE3-EFA2-4D85-AF71-02970D998268}</Project>
+      <Name>MyWebsite.Services</Name>
     </ProjectReference>
   </ItemGroup>
   <PropertyGroup>

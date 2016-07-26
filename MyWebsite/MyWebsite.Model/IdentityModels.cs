@@ -25,6 +25,8 @@ namespace MyWebsite.Model
         {
         }
 
+        public virtual DbSet<GolfCompetition> GolfCompeitions { get; set; }
+
         public static ApplicationDbContext Create()
         {
             return new ApplicationDbContext();
