@@ -22,7 +22,10 @@
         // GET: Golf
         public ActionResult Index()
         {
-            return View();
+            var temp = this.golfService.GetCompetitions();
+
+
+            return View("Index", temp);
         }
 
         public static IServiceFactory Factory { get; set; }
