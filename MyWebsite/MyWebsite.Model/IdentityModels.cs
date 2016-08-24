@@ -23,9 +23,7 @@ namespace MyWebsite.Model
         public ApplicationDbContext()
             : base("DefaultConnection", throwIfV1Schema: false)
         {
-        }
-
-        public virtual DbSet<GolfCompetition> GolfCompeitions { get; set; }
+        }       
 
         public static ApplicationDbContext Create()
         {

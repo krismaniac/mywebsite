@@ -1,19 +1,20 @@
-namespace MyWebsite.Model.Migrations
+namespace MyWebsite.Model.Migrations.ApplicationDbContext
 {
     using System;
     using System.Data.Entity;
     using System.Data.Entity.Migrations;
     using System.Linq;
 
-    internal sealed class Configuration : DbMigrationsConfiguration<MyWebsite.Model.MainDbContext>
+    internal sealed class Configuration : DbMigrationsConfiguration<MyWebsite.Model.ApplicationDbContext>
     {
         public Configuration()
         {
             AutomaticMigrationsEnabled = false;
-            ContextKey = "MyWebsite.Model.MainDbContext";
+            MigrationsDirectory = @"Migrations\ApplicationDbContext";
+            ContextKey = "MyWebsite.Model.ApplicationDbContext";
         }
 
-        protected override void Seed(MyWebsite.Model.MainDbContext context)
+        protected override void Seed(MyWebsite.Model.ApplicationDbContext context)
         {
             //  This method will be called after migrating to the latest version.
 

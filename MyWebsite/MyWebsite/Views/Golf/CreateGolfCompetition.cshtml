@@ -1,0 +1,41 @@
+﻿@model MyWebsite.Model.GolfCompetition
+
+<h2>Submit in a golf competition</h2>
+
+<div>
+    @using (Html.BeginForm("CreateGolfCompetition", null, null, FormMethod.Post))
+    {
+        <div align="left" class="form-horizontal">
+            <div class="form-group">
+                @Html.LabelFor(model => model.Title, htmlAttributes: new { @class = "control-label col-md-2 required" })
+                <div class="col-md-10">
+                    @Html.TextBoxFor(model => model.Title, new { @class = "form-control" })
+                    @*@Html.ValidationMessageFor(model => model.StartDate, "", new { @class = "text-danger" })*@
+                </div>
+            </div>
+        </div>
+
+        <div align="left" class="form-horizontal">
+            <div class="form-group">
+                @Html.LabelFor(model => model.Date, htmlAttributes: new { @class = "control-label col-md-2 required" })
+                <div class="col-md-10">
+                    @Html.TextBoxFor(model => model.Date, Model.Date.ToString("{0:dd/MM/yyyy}"), new { @class = "form-control" })
+                    @*@Html.ValidationMessageFor(model => model.Date, "", new { @class = "text-danger" })*@
+                </div>
+            </div>
+        </div>
+
+        <div align="left" class="form-horizontal">
+            <div class="form-group">
+                @Html.LabelFor(model => model.Description, htmlAttributes: new { @class = "control-label col-md-2 required" })
+                <div class="col-md-10">
+                    @Html.TextAreaFor(model => model.Description, new { @class = "form-control" })
+                    @*@Html.ValidationMessageFor(model => model.StartDate, "", new { @class = "text-danger" })*@
+                </div>
+            </div>
+        </div>
+
+        <button id="buttonStyle" type="submit" name="action" value="Submit" class="btn btn-default">Save Draft</button>
+    }
+
+</div>

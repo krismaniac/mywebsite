@@ -3,7 +3,7 @@ namespace MyWebsite.Model.Migrations
     using System;
     using System.Data.Entity.Migrations;
     
-    public partial class AddGolfCompetitions : DbMigration
+    public partial class InitialCreate : DbMigration
     {
         public override void Up()
         {

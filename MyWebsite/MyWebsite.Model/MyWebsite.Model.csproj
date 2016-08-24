@@ -182,15 +182,17 @@
     <Compile Include="IdentityModels.cs" />
     <Compile Include="Interfaces\IGolfService.cs" />
     <Compile Include="Interfaces\IServiceFactory.cs" />
+    <Compile Include="MainDbContext.cs" />
     <Compile Include="ManageViewModels.cs" />
-    <Compile Include="Migrations\201607251332324_InitialCreate.cs" />
-    <Compile Include="Migrations\201607251332324_InitialCreate.Designer.cs">
-      <DependentUpon>201607251332324_InitialCreate.cs</DependentUpon>
+    <Compile Include="Migrations\201608241728273_InitialCreate.cs" />
+    <Compile Include="Migrations\201608241728273_InitialCreate.Designer.cs">
+      <DependentUpon>201608241728273_InitialCreate.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201607251333494_AddGolfCompetitions.cs" />
-    <Compile Include="Migrations\201607251333494_AddGolfCompetitions.Designer.cs">
-      <DependentUpon>201607251333494_AddGolfCompetitions.cs</DependentUpon>
+    <Compile Include="Migrations\ApplicationDbContext\201607202238439_InitialCreate.cs" />
+    <Compile Include="Migrations\ApplicationDbContext\201607202238439_InitialCreate.Designer.cs">
+      <DependentUpon>201607202238439_InitialCreate.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\ApplicationDbContext\Configuration.cs" />
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -199,11 +201,11 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201607251332324_InitialCreate.resx">
-      <DependentUpon>201607251332324_InitialCreate.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201608241728273_InitialCreate.resx">
+      <DependentUpon>201608241728273_InitialCreate.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201607251333494_AddGolfCompetitions.resx">
-      <DependentUpon>201607251333494_AddGolfCompetitions.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\ApplicationDbContext\201607202238439_InitialCreate.resx">
+      <DependentUpon>201607202238439_InitialCreate.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

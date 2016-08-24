@@ -13,5 +13,6 @@
         List<GolfCompetition> GetCompetitions();
 
         List<GolfCompetition> GetCompetitions(int year);
+        void CreateGolfCompetition(GolfCompetition golfComp);
     }
 }

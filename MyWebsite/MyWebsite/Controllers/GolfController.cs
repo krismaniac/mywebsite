@@ -1,5 +1,6 @@
 ﻿namespace MyWebsite.Controllers
 {
+    using Model;
     using MyWebsite.Interfaces;
     using MyWebsite.Services;
     using System;
@@ -26,6 +27,18 @@
 
 
             return View("Index", temp);
+        }
+
+        public ActionResult CreateGolfCompetition()
+        {
+            return View();
+        }
+
+        public ActionResult CreateGolfCompetition(GolfCompetition golfComp)
+        {
+            this.golfService.CreateGolfCompetition(golfComp);
+
+            return View("Index");
         }
 
         public static IServiceFactory Factory { get; set; }

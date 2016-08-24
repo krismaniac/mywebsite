@@ -10,21 +10,27 @@
 
     public class GolfService : IGolfService
     {
-        private ApplicationDbContext golfContext;
+        private MainDbContext golfContext;
 
         public GolfService()
         {
-            this.golfContext = new ApplicationDbContext();
+            this.golfContext = new MainDbContext();
+        }
+
+        public void CreateGolfCompetition(GolfCompetition golfComp)
+        {
+            this.golfContext.GolfCompetitions.Add(golfComp);
+            
         }
 
         public List<GolfCompetition> GetCompetitions()
         {
-            return this.golfContext.GolfCompeitions.ToList();
+            return this.golfContext.GolfCompetitions.ToList();            
         }
 
         public List<GolfCompetition> GetCompetitions(int year)
         {
-            return this.golfContext.GolfCompeitions.Where(x => x.Date.Year == year).ToList();
+            return this.golfContext.GolfCompetitions.Where(x => x.Date.Year == year).ToList();
         }
     }
 }

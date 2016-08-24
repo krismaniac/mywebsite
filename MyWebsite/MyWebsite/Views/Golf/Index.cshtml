@@ -1,42 +1,27 @@
 ﻿@model List<MyWebsite.Model.GolfCompetition>
 @using MyWebsite.Model;
 
-@{
+@*@{
     ViewBag.Title = "Index";
     Layout = "~/Views/Shared/_Layout.cshtml";
-}
+}*@
 
 <h2>Golf Home</h2>
 
 <br />
 
-<table class="table" style="border:solid">
-
-    <tr>
-        <th>
-            <label>Date</label>
-        </th>
-        <th>
-            <label>Title</label>
-        </th>
-        <th>
-            <label>Description</label>
-        </th>
-    </tr>
-
+<div>
     @foreach (var item in Model)
     {
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.Date)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Title)
-            </td>
-            <td>
+        <div>
+            <p>
+                @Html.DisplayFor(modelItem => item.Date) - @Html.DisplayFor(modelItem => item.Title)
+            </p>
+            <br />
+            <p>
                 @Html.DisplayFor(modelItem => item.Description)
-            </td>
-        </tr>
+            </p>
+        </div>
     }
 
-</table>
+</div>
